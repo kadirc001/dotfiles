@@ -1,0 +1,13 @@
+[General]
+LastUsedVersion=210800
+
+[MainWindow]
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+
+[Recent Files]
+File1[$e]=$HOME/Pictures/Wallpapers/Tower-Night.png
+Name1[$e]=Tower-Night.png
+
+[SideBar]
+InformationSplitterSizes=0,0

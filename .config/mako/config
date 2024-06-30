@@ -1,0 +1,19 @@
+# Appearance {
+font=JetBrainsMono Nerd Font
+width=350
+padding=10
+margin=10
+border-size=1
+border-radius=2
+
+background-color=#2e3440
+border-color=#ebcb8b
+text-color=#ffffff
+# }
+
+default-timeout=5000
+on-button-middle=exec makoctl menu -n "$id" wofi --dmenu -p 'Select action: '
+
+[urgency=high]
+border-color=#f7768e
+ignore-timeout=1

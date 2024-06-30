@@ -1,0 +1,75 @@
+{
+  "margin-top": 3,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock#date", "custom/media"],
+  "modules-right": ["pulseaudio", "network", "cpu", "memory", "tray"],
+  "clock#date": {
+    "format": "{:%H:%M  %e %b}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "custom/media": {
+    "format": "{icon}  {}",
+    "tooltip-format": "<span size='xx-large'>{icon}  {alt}</span>\n<tt>{}</tt>",
+    "return-type": "json",
+    "max-length": 40,
+    "format-icons": {
+	"firefox": "󰈹",
+	"spotify": "󰓇",
+	"mpv": "",
+	"vlc": "󰕼",
+	"default": "󰐊"
+    },
+    "escape": true,
+    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+  },
+  "pulseaudio": {
+    "scroll-step": 5, // %, can be a float
+    "format": "{icon}  {volume}%{format_source}",
+    "format-bluetooth": "{volume}%",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "ignored-sinks": ["Easy Effects Sink"],
+    "max-volume": 150,
+    //"format-source": "{volume}% ",
+    //"format-source-muted": "",
+    "format-source": "",
+    "format-source-muted": " ",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "tooltip-format": "󱡬 {desc}"
+  },
+  "network": {
+    "format-wifi": "󰖩 {essid} ({signalStrength}%)",
+    "format-ethernet": "󰁅 {bandwidthDownBytes}  󰁝 {bandwidthUpBytes}",
+    "interval": 1,
+    "format-linked": "󰈉  No IP",
+    "format-alt": "{ipaddr}",
+    "tooltip-format": "󰁝 {bandwidthUpBits} 󰁅 {bandwidthDownBits}\n󰈁 {ifname}\n<big>{ipaddr}</big>",
+    "min-length": 22,
+    "max-length": 22
+  },
+  "custom/separator": {
+    "format": " | "
+  },
+  "cpu": {
+    "interval": 1,
+    "format": "  {max_frequency}Ghz | {usage}%",
+    "format-alt": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}",
+    "format-icons": ["<span color='#69ff94'>▁</span>", "<span color='#2aa9ff'>▂</span>", "<span color='#f8f8f2'>▃</span>", "<span color='#f8f8f2'>▄</span>", "<span color='#ffffa5'>▅</span>", "<span color='#ffffa5'>▆</span>", "<span color='#ff9977'>▇</span>", "<span color='#dd532e'>█</span>"],
+    "min-length": 17,
+    "max-length": 17
+  },
+  "memory": {
+    "format": "  {percentage}%",
+    "format-alt": "  {used:0.1f} / {total:0.0f} GB",
+    "tooltip-format": "  {used:0.1f} / {total:0.0f} GB ({percentage}%)\n󰓢 {swapUsed:0.1f} / {swapTotal:0.0f} GB ({swapPercentage}%)",
+    "interval": 10
+  },
+}

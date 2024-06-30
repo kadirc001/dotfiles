@@ -1,0 +1,5 @@
+clear
+table
+clear
+ls | table
+exit

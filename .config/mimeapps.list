@@ -1,0 +1,8 @@
+[Added Associations]
+application/x-xz-compressed-tar=bsdtar.desktop;
+image/png=pqiv-3.desktop;pqiv-2.desktop;
+application/x-sh=librewolf.desktop;
+
+[Default Applications]
+application/x-xz-compressed-tar=bsdtar.desktop;
+image/png=pqiv-3.desktop;
