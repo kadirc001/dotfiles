@@ -44,7 +44,7 @@ mv dotfiles ~/.dotfiles
 
 ```bash
 # For Arch Linux, YAY
-yay -S kitty librewolf-bin zsh waybar mako wofi neovim dolphin vlc fastfetch hyprlock hyprshot hyprpaper btop
+yay -S kitty librewolf-bin zsh waybar mako wofi neovim dolphin vlc fastfetch hyprlock hyprshot hyprpaper btop fzf zoxide starship zinit ttf-jetbrains-mono ttf-jetbrains-mono-nerd
 ```
 
 ### 4. Restart your computer
