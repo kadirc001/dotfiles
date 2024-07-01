@@ -3,16 +3,19 @@
 </p>
 
 <div align="center">
-  <a href="#preview">Preview</a> | <a href="#install">Installation</a> | <a href="#theme">Theme</a>
+  <a href="#preview">Preview</a> | <a href="#installation">Installation</a> | <a href="#theme">Theme</a>
 </div>
 
 ## Preview
-![1](./preview-1.png)
-![2](./preview-2.png)
+![Screenshot 1](./preview-1.png)
+![Screenshot 2](./preview-2.png)
 
-Here are some details:
+Welcome to my customized Linux environment built around Arch Linux, featuring various tools and configurations tailored to my workflow.
 
+### Distribution
 - **Distribution**: [Arch Linux](https://archlinux.org)
+
+### Components
 - **Window Manager**: [Hyprland](https://hyprland.org)
 - **Shell**: [Zsh](https://www.zsh.org/)
 - **Terminal**: [Kitty](https://sw.kovidgoyal.net/kitty/)
@@ -21,37 +24,38 @@ Here are some details:
 - **Dmenu**: [Wofi](https://hg.sr.ht/~scoopta/wofi)
 - **Editor**: [Neovim](https://neovim.io/)
 - **File Manager**: [Dolphin](https://apps.kde.org/dolphin/)
-- **System information**: [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
+- **System Information**: [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
 
 ## Installation
 
 > [!CAUTION]
-> The configurations applied by this repository are highly personalized and may not be suitable for everyone. Please exercise caution and avoid using these settings without understanding their implications fully. Proceed at your own risk!
+> The configurations provided here are highly personalized. Ensure you understand each change before applying them to your system. Use at your own risk!
 
-### 1. Clone the repository
+### Steps to Install
 
-```bash
-git clone https://github.com/kadirc001/dotfiles
-```
-
-### 2. Move the repository folder
-
-```bash
-mv dotfiles ~/.dotfiles
-```
-
-### 3. Install required apps
-
-```bash
-# For Arch Linux, YAY
-yay -S kitty librewolf-bin zsh waybar mako wofi neovim dolphin vlc fastfetch hyprlock hyprshot hyprpaper btop fzf zoxide starship zinit ttf-jetbrains-mono ttf-jetbrains-mono-nerd
-```
-
-### 4. Restart your computer
-
-```bash
-reboot
-```
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/kadirc001/dotfiles
+   ```
+2. **Backup your existing dotfiles (if any):**
+   ```bash
+   mv ~/.config ~/.config.bak
+   mv ~/.zshrc ~/.zshrc.bak
+   ```
+3. **Move the cloned repository to your home directory:**
+   ```bash
+   mv dotfiles/.config ~/.config
+   mv dotfiles/.zshrc ~/.zshrc
+   ```
+4. **Install required applications:**
+    For Arch Linux
+   ```bash
+   yay -S kitty librewolf-bin zsh waybar mako wofi neovim dolphin vlc fastfetch hyprlock hyprpaper hyprshot btop fzf zoxide zinit starship kvantum nwg-look ttf-jetbrains-mono ttf-jetbrains-mono-nerd pavucontrol
+   ```
+5. **Restart your computer to apply changes (or logout & login):**
+   ```bash
+   reboot
+   ```
 
 ## Theme
-[Nord Theme](https://www.nordtheme.com/)
+- **Theme:** [Nord Theme](https://www.nordtheme.com/)
